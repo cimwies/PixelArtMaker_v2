@@ -13,23 +13,20 @@ $('#pixel_canvas').on('mousedown','td', function(evt) {
 	} else if (evt.which === 3) {
  	 	$(this).css('background-color','');
 	};
-});
-
-
 // draw with left mouse button (only) hold down - this will not work on a touch display
-$('#pixel_canvas').on('mouseover mouseleave', 'td', function(evt) {
-		if( evt.which === 1 ) {
-			const pickColor = document.getElementById('colorPicker').value;
-			$(this).css('background-color',pickColor);
-		} else if (evt.which === 3) {
-			$(this).css('background-color','');
-		};
-});//end td mouseover & right draw fixed
+$('td').on('mouseover mouseleave', function() {
+	if( evt.which === 1 ) {
+ 		const pickColor = document.getElementById('colorPicker').value;
+ 	 	$(this).css('background-color',pickColor);
+	} else if (evt.which === 3) {
+ 	 	$(this).css('background-color','');
+	};
+});
+})
 
+.on('mouseup', 'td', function() {
+$('td').off('mouseover mouseleave');
 
-//finish all mous up events
-$('#pixel_canvas').on('mouseup', 'td', function() {
-		$('td').off('mouseover mouseleave');
 });
 
 
@@ -109,10 +106,10 @@ if ( $(window).width() > 414 && $(window).width() <= 736) {
 
 
 function disableMenu() {
-	document.getElementById("pixel_canvas").oncontextmenu = function() {
+		document.getElementById('pixel_canvas').oncontextmenu = function() {
 		return false;
 	}
-}
+};
 
 /**
 *@description Refresh the whole page.
@@ -149,7 +146,7 @@ $('#btn_print').click(function() {
 *@description Required call back functions in order to proceed when the 'Submit' button is triggered.
 */
 
-document.getElementById("btn_submit").addEventListener("click",function(event) {
+document.getElementById('btn_submit').addEventListener('click',function(event) {
 	event.preventDefault();
 	makeGrid();
 	clear();
