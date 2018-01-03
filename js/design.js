@@ -104,12 +104,12 @@ if ( $(window).width() > 414 && $(window).width() <= 736) {
 };
 
 /**
-*@description Disable the context menu inorder to make smooth 'right-click' possible.
+*@description Disable the context menu inorder to make smooth 'right-click' on only #pixel_canvas possible.
 */
 
 
 function disableMenu() {
-	document.oncontextmenu = function() {
+	document.getElementById("pixel_canvas").oncontextmenu = function() {
 		return false;
 	}
 }
