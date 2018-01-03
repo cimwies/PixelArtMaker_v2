@@ -4,37 +4,34 @@
 * @description To draw a choosen background color with left mouse button down
 */
 
-$('#pixel_canvas').on('mousedown','td', function(evt) {
 
 // add or remoce the color setting of a single cell
-
+$('#pixel_canvas').on('mousedown','td', function(evt) {
 	if( evt.which === 1 ) {
  		const pickColor = document.getElementById('colorPicker').value;
  	 	$(this).css('background-color',pickColor);
 	} else if (evt.which === 3) {
  	 	$(this).css('background-color','');
 	};
+});
+
 
 // draw with left mouse button (only) hold down - this will not work on a touch display
-/**
-/*TODO right mouse Click: save img ans so on not possible
-*/
-
-	$('td').on('mouseover mouseleave', function() {
-
+$('#pixel_canvas').on('mouseover mouseleave', 'td', function(evt) {
 		if( evt.which === 1 ) {
 			const pickColor = document.getElementById('colorPicker').value;
 			$(this).css('background-color',pickColor);
+		} else if (evt.which === 3) {
+			$(this).css('background-color','');
 		};
+});//end td mouseover & right draw fixed
 
-	});//end td mouseover & right draw fixed
 
-
-})
-
-.on('mouseup', 'td', function() {
+//finish all mous up events
+$('#pixel_canvas').on('mouseup', 'td', function() {
 		$('td').off('mouseover mouseleave');
 });
+
 
 /**
 *@description Create the grid by entereing the input values for width and height.
@@ -110,6 +107,7 @@ if ( $(window).width() > 414 && $(window).width() <= 736) {
 *@description Disable the context menu inorder to make smooth 'right-click' possible.
 */
 
+
 function disableMenu() {
 	document.oncontextmenu = function() {
 		return false;
@@ -140,7 +138,7 @@ function clear() {
 }
 
 /**
-*@description Refresh the whole page.
+*@description Print out whole page.
 */
 
 $('#btn_print').click(function() {
