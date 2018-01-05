@@ -2,10 +2,10 @@
 * @description To assign a choosen background color by left clicking the cells
 * @description To remove a choosen background color by right clicking the cells
 * @description To draw a choosen background color with left mouse button down
+* @description To remove choosen background colors with right mouse button down
 */
 
-
-// add or remoce the color setting of a single cell
+// add or remove the color setting of a single cell
 $('#pixel_canvas').on('mousedown','td', function(evt) {
 	if( evt.which === 1 ) {
  		const pickColor = document.getElementById('colorPicker').value;
@@ -13,7 +13,8 @@ $('#pixel_canvas').on('mousedown','td', function(evt) {
 	} else if (evt.which === 3) {
  	 	$(this).css('background-color','');
 	};
-// draw with left mouse button (only) hold down - this will not work on a touch display
+
+// draw or continuously remove color fromseveral cells
 $('td').on('mouseover mouseleave', function() {
 	if( evt.which === 1 ) {
  		const pickColor = document.getElementById('colorPicker').value;
@@ -24,9 +25,9 @@ $('td').on('mouseover mouseleave', function() {
 });
 })
 
+// stop mouse action on #pixel_canvas
 .on('mouseup', 'td', function() {
 $('td').off('mouseover mouseleave');
-
 });
 
 
@@ -101,9 +102,8 @@ if ( $(window).width() > 414 && $(window).width() <= 736) {
 };
 
 /**
-*@description Disable the context menu inorder to make smooth 'right-click' on only #pixel_canvas possible.
+*@description Disable the context menu in order to make mouse button actions on only #pixel_canvas possible.
 */
-
 
 function disableMenu() {
 		document.getElementById('pixel_canvas').oncontextmenu = function() {
@@ -156,17 +156,24 @@ document.getElementById('btn_submit').addEventListener('click',function(event) {
 });
 
 /**
-*@description Snipped for file download - png Generation!
+* @description Snipped for file download - png Generation!
+* https://stackoverflow.com/questions/10721884/render-html-to-an-image
+* I am trying to implement https://github.com/tsayen/dom-to-image#usage
 */
 
-const rgbToHex = (r, g, b) => {
-  const componentToHex = color => {
-    const hex = color.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
-  }
-  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-}
+$('#btn_print').click(function() {
 
+	var node = document.getElementById('pixel_canvas');
+
+	domtoimage.toBlob(document.getElementById('pixel_canvas'))
+	    .then(function (blob) {
+	        window.saveAs(blob, 'pixel_canvas');
+	    });
+
+});
+
+// PNG FILTER STUFF
+/*
 $('#btn_save').click(function() {
 
 		$('#pixel_canvas tr').each(function(){
@@ -190,6 +197,7 @@ $('#btn_save').click(function() {
 	})
 
 });
+*/
 
 
 
