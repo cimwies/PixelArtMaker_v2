@@ -9,17 +9,15 @@
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			  crossorigin="anonymous">
 		</script>
-    <script
-        src="js/pnglib.js">
-    </script>
+
+    <script src="js/jscolor.min.js"></script>
+    <script src="js/dom-to-image.js"></script>
 
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:700">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-
 
     <header>
         <h1>Lab:<br /><span class="red">Pixel </span><span class="green">Art </span><span class="blue">Maker</span></h1>
@@ -36,7 +34,7 @@
 
         <h2>2. Pick a Color and Design your Canvas<span class="blink">_</span></h2>
         <div id="colorDiv">
-          <input type="color" id="colorPicker">
+          <input type="color" id="colorPicker" class="jscolor" value="#EA4335">
         </div>
 
         <h2>3. Instructions</h2>
@@ -48,15 +46,13 @@
     </header>
 
     <div class="container">
-        <table id="pixel_canvas"></table>
-
 
       <input id="btn_print" type="button" class="btn" value="print" />
-
       <input id="btn_save" type="button" class="btn" value="save" />
 
-    </div>
+      <table id="pixel_canvas"></table>
 
+    </div>
 
     <script src="js/design.js"></script>
 </body>
