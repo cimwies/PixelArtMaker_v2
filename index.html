@@ -14,44 +14,62 @@
     <script src="js/dom-to-image.js"></script>
 
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:700">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles_v2.css">
 </head>
 <body>
 
-    <header>
-        <h1>Lab:<br /><span class="red">Pixel </span><span class="green">Art </span><span class="blue">Maker</span></h1>
-        <h2>1. Choose Grid Size</h2>
-        <form id="sizePicker">
-            Grid Height:
-            <input type="number" id="input_height" name="height" min="1" value="1">
-            <br>Grid Width:
-            <input type="number" id="input_width" name="width" min="1" value="1">
-            <br>
-            <button id="btn_submit" class="btn" type="submit">Submit</button>
-            <button id="btn_reload"  class="btn">Reload Page</button>
-        </form>
+<h1><span class="green">Pixel</span><span class="red">Art</span><span class="blue">Maker</span></h1>
+<div class="clear"></div>
+    <header class="flexbox">
 
-        <h2>2. Pick a Color and Design your Canvas<span class="blink">_</span></h2>
-        <div id="colorDiv">
-          <input type="color" id="colorPicker" class="jscolor" value="#EA4335">
+        <div class="col">
+            <h2>1. Size</h2>
+            <form id="sizePicker">
+              <p>
+                <label>Grid Height:</label>
+                <input type="number" id="input_height" name="height" min="1" value="1">
+              </p>
+              <p>
+                <label>Grid Width:</label>
+                <input type="number" id="input_width" name="width" min="1" value="1">
+              </p>
+              </form>
+              <button id="btn_submit" class="btn" type="submit">submit</button>
+              <button id="btn_reload"  class="btn">reload</button>
         </div>
 
-        <h2>3. Instructions</h2>
-        <p><span class="blue">Paint & Draw:<br></span>- left Mouse button -<br>click or hold down for continuous drawing</p>
-        <p><span class="blue">Remove Color:<br></span>- right Mouse button -<br>click or hold down for continuous erasing</p>
+        <div class="col">
+            <h2>2. Color</h2>
+            <div id="colorDiv">
+              <input type="color" id="colorPicker" class="jscolor input" value="#EA4335">
+            </div>
+       </div>
+
+        <div class="col">
+            <h2>3. How to</h2>
+            <p><span class="howTo">Paint:</span> left Mouse button</p>
+            <p><span class="howTo">Erase:</span> right Mouse button</p>
+            <p>*click or hold down for continuous drawing or erasing</p>
+        </div>
 
     </header>
 
     <div class="container">
-
-      <input id="btn_print" type="button" class="btn" value="print" />
-      <input id="btn_save" type="button" class="btn" value="save" />
-
-      <table id="pixel_canvas"></table>
+      <div class="flexbox">
+        <div class="col">
+        </div>
+        <div class="col">
+            <input id="btn_print" type="button" class="btn" value="print" />
+            <input id="btn_save" type="button" class="btn" value="save" />
+        </div>
+        <div class="col">
+        </div>
+      </div>
+            <table id="pixel_canvas"></table>
 
     </div>
 
-    <script src="js/design.js"></script>
+    <script src="js/design_v2.js"></script>
 </body>
 </html>
