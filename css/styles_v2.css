@@ -22,12 +22,11 @@ html, body {
 
 /* base CSS */
 body {
-  font: 90%/1.55 'Lato', sans-serif;
+  font: 90%/1.75 'Lato', sans-serif;
   color: #fff;
   text-shadow: 0 0 0.31em #000;
   background: #000 url(../img/bg.jpg) no-repeat center center fixed;
   background-size: cover;
-
   padding: 5px;
 
 }
@@ -37,7 +36,6 @@ h1, h2, h3 {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-
   margin-bottom: 5px;
 
 }
@@ -73,6 +71,11 @@ h3 {
   font-weight: bold;
   text-transform: uppercase;
   color: #EA3D2C;
+  margin-right: 5px;
+
+}
+
+p { margin: 0;
 
 }
 
@@ -110,6 +113,10 @@ td:hover {
 }
 
 /* Form and Input Elelemtns */
+form {
+  margin-bottom: 10px;
+
+}
 
 label {
   display: inline-block;
@@ -137,7 +144,7 @@ input[type=number],
   padding: 5px 10px;
   border: 2px solid #d6d6d6; /* 1px solid  #448aff;*/
   border-radius: 1rem;
-  vertical-align: top;
+  vertical-align: middle;
   width: 30%;
   height: 30px;
   cursor: pointer;
@@ -222,7 +229,7 @@ header {
 footer {
   background-color: #252525;
   margin: 0 3px 0;
-  padding: 5px 10px;
+  padding: 15px;
 
 }
 
