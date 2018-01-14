@@ -22,10 +22,12 @@ html, body {
 /* base CSS */
 body {
   font: 90%/1.55 'Lato', sans-serif;
-  color: #999; ;
-  background-color: #1d1d1d;
+  color: #fff;
+  text-shadow: 0 0 0.31em #000;
+  background: #000 url(../img/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
 
-  padding: 7.5px;
+  padding: 5px;
 }
 
 h1, h2, h3 {
@@ -34,7 +36,7 @@ h1, h2, h3 {
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  margin: 0 0 7.5px 0;
+  margin-bottom: 5px;
 
 }
 
@@ -42,24 +44,24 @@ h1 {
   font-size: 2.2em;
   letter-spacing: 3px;
   color: #fff;
-  background-color: #151515;
-  margin: 7.5px;
-  padding: 20px;
+  background-color: #252525;
+  margin: 3px 3px 0 3px;
+  padding: 10px;
   float: right;
   display: inline-block;
-
-
+  position: relative;
+  z-index: 10;
 
 }
 
 .red {
   text-transform: lowercase;
-  color: #da3732;
+  color: #EA3D2C;
 
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.0em;
 
 }
 
@@ -69,7 +71,8 @@ h3 {
 
 .howTo {
   font-weight: bold;
-  color: #da3732;
+  text-transform: uppercase;
+  color: #EA3D2C;
 
 }
 
@@ -97,7 +100,7 @@ td {
 }
 
 td:hover {
-  box-shadow: inset 0 0 5px rgba(125, 125, 125, 0.5);
+  box-shadow: inset 0 0 5px rgba(125, 125, 125, 0.8);
 
 }
 
@@ -111,7 +114,7 @@ td:hover {
 label {
   display: inline-block;
   width: 45%;
-  margin: 0 7.5px 7.5px 0;
+  margin: 0 5px 5px 0;
   padding: 0;
 
 }
@@ -119,32 +122,42 @@ label {
 input[type=number],
 .input {
     text-transform: uppercase;
-    margin: 0 7.5px 7.5px 0;
+    margin: 0 5px 5px 0;
     width: 45%;
-    height: 28px;
+    height: 30px;
 
 }
 
 .btn {
   text-transform: uppercase;
   color: #fff;
-  background-color: #448aff;
-  margin: 0 7.5px 7.5px 0;
+  background-color: #252525;
+
   padding: 5px 10px;
 
-  border: 1px solid #448aff;
+  border: 2px solid #d6d6d6; /* 1px solid  #448aff;*/
+  border-radius: 1rem;
+
   vertical-align: top;
-  width: 45%;
-  height: 28px;
+  width: 30%;
+  height: 30px;
   cursor: pointer;
 
 }
 
 .btn:hover {
-  color: #fff;
-  background-color: #3367BF;
-  border: 1px solid #3367BF;
+  color: #252525;
+  background-color: #d6d6d6;
+  border: 1px solid #d6d6d6;
 
+}
+
+.first {
+  margin: 0 3% 0 12%;
+}
+
+.second {
+  margin: 0 12% 0 3%;
 }
 
 /* content elements */
@@ -154,18 +167,20 @@ header {
 
 }
 .flexbox {
+	position: relative;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  z-index: 10;
 
 }
 
 .flexbox .col {
   flex: 1;
-  margin: 7.5px;
-  padding: 30px 15px;
-  background-color: #151515;
+  margin: 3px;
+  padding: 15px;
+  background-color: #252525;
 
 }
 .flexbox .col:nth-child(1) {
@@ -186,23 +201,36 @@ header {
 
 }
 
-.container {
+#container {
   clear: both;
   display: none;
   position: relative;
   width: 100%;
-  margin-bottom: 45px;
+  z-index: 10;
 
 }
 
 #pixel_canvas {
-  margin: 0 auto;
+  margin: 15px auto;
+  z-index: 10;
+
+
+}
+
+footer {
+  background-color: #252525;
+  margin: 0 3px 0;
+  padding: 5px 10px;
+  position: relative;
+  z-index: 10;
 
 }
 
 img {
   display: block;
   background-color: #fff;
-  margin: 0 auto 45px;;
+  margin: 15px auto;
+  z-index: 10;
+
 
   }
