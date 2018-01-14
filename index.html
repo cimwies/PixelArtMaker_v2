@@ -19,12 +19,12 @@
 </head>
 <body>
 
-<h1><span class="green">Pixel</span><span class="red">Art</span><span class="blue">Maker</span></h1>
+<h1>Pixel<span class="red">Art</span>Maker</h1>
 <div class="clear"></div>
     <header class="flexbox">
 
         <div class="col">
-            <h2>1. Size</h2>
+            <h2>1. Set Size</h2>
             <form id="sizePicker">
               <p>
                 <label>Grid Height:</label>
@@ -35,14 +35,14 @@
                 <input type="number" id="input_width" name="width" min="1" value="1">
               </p>
               </form>
-              <button id="btn_submit" class="btn" type="submit">submit</button>
-              <button id="btn_reload"  class="btn">reload</button>
+              <button id="btn_submit" class="btn first" type="submit">submit</button>
+              <button id="btn_reload" class="btn second">reload</button>
         </div>
 
         <div class="col">
-            <h2>2. Color</h2>
+            <h2>2. Pick Color</h2>
             <div id="colorDiv">
-              <input type="color" id="colorPicker" class="jscolor input" value="#EA4335">
+              <input type="color" id="colorPicker" class="jscolor input second" value="#1473e6">
             </div>
        </div>
 
@@ -55,21 +55,24 @@
 
     </header>
 
-    <div class="container">
-      <div class="flexbox">
-        <div class="col">
-        </div>
-        <div class="col">
-            <input id="btn_print" type="button" class="btn" value="print" />
-            <input id="btn_save" type="button" class="btn" value="save" />
-        </div>
-        <div class="col">
-        </div>
-      </div>
-            <table id="pixel_canvas"></table>
-
+    <div id="container">
+        <table id="pixel_canvas"></table>
+        <div class="flexbox">
+            <div class="col">
+            </div>
+            <div class="col">
+                <input id="btn_print" type="button" class="btn first" value="print" />
+                <input id="btn_save" type="button" class="btn second" value="save" />
+            </div>
+            <div class="col">
+                <p><span class="howTo">Save:</span> right click on the image and "save as".</p>
+            </div>
+          </div>
     </div>
-
+  <footer>
+    <p>Works best on Firefox</p>
+  </footer>
+  <div class="extra"></div>
     <script src="js/design_v2.js"></script>
 </body>
 </html>
