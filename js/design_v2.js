@@ -214,7 +214,7 @@ document.getElementById('btn_submit').addEventListener('click',function(event) {
 	clear();
 	disableMenu();
 	$('#btn_submit').hide('slow');
-	$('.container').show('fast');
+	$('#container').show('fast');
 });
 
 /**
@@ -229,7 +229,7 @@ $('#btn_save').click(function() {
     .then(function (dataUrl) {
         var img = new Image();
         img.src = dataUrl;
-        document.body.appendChild(img);
+        document.getElementById('container').appendChild(img);
     })
     .catch(function (error) {
         console.error('oops, something went wrong!', error);
