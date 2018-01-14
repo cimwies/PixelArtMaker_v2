@@ -122,6 +122,9 @@ label {
 input[type=number],
 .input {
     text-transform: uppercase;
+    background-color: #d6d6d6;
+    border: 2px solid #d6d6d6;
+    
     margin: 0 5px 5px 0;
     width: 45%;
     height: 30px;
