@@ -30,7 +30,7 @@ const hexToRgb = hex => {
 	*/
 
 
-function hex_to_Rgb(hex) {
+function hexToRgb(hex) {
     var m = hex.match(/^#?([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i);
     return {
         r: parseInt(m[1], 16),
