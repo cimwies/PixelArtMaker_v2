@@ -18,6 +18,7 @@ const hexToRgb = hex => {
 */
 
 	////////////////////////////////
+/*
 
 	function hexToRgb(hex) {
 		let r, g, b;
@@ -26,9 +27,17 @@ const hexToRgb = hex => {
 	    b = parseInt(hex.substr(5,2),16);
 	    return `rgb(${r}, ${g}, ${b})`;
 	}
+	*/
 
 
-
+function hex_to_RGB(hex) {
+    var m = hex.match(/^#?([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i);
+    return {
+        r: parseInt(m[1], 16),
+        g: parseInt(m[2], 16),
+        b: parseInt(m[3], 16)
+    };
+}
 
 // add or remove the color setting of a single cell
 $('#pixel_canvas').on('mousedown','td', function(evt) {
