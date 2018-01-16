@@ -30,14 +30,19 @@ const hexToRgb = hex => {
 	*/
 
 
-function hexToRgb(hex) {
-    var m = hex.match(/^#?([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i);
-    return {
-        r: parseInt(m[1], 16),
-        g: parseInt(m[2], 16),
-        b: parseInt(m[3], 16)
-    };
-}
+	function hexToRgb(hex) {
+	  var c;
+	  if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+	    c = hex.substring(1).split('');
+	    if (c.length == 3) {
+	      c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+	    }
+	    c = '0x' + c.join('');
+	    return 'rgb(' + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(', ') + ')';
+	  }
+	  throw new Error('Bad Hex');
+	};
+
 
 // add or remove the color setting of a single cell
 $('#pixel_canvas').on('mousedown','td', function(evt) {
