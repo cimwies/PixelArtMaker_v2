@@ -1,4 +1,4 @@
-/* basic browser reset */
+e1/* basic browser reset */
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -25,7 +25,7 @@ body {
   font: 90%/1.75 'Lato', sans-serif;
   color: #fff;
   text-shadow: 0 0 0.31em #000;
-  background: #000 url(../img/bg_v2.jpg) no-repeat center center fixed;
+  background: #1e1e1e;
   background-size: cover;
   padding: 5px;
 
