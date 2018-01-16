@@ -29,7 +29,7 @@ const hexToRgb = hex => {
 	}
 	*/
 
-
+/*
 	function hexToRgb(hex) {
 	  var c;
 	  if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
@@ -77,6 +77,8 @@ $('td').off('mouseover mouseleave');
 
 //////////////////////////////////WORKING///////////////////
 /*
+
+*/
 // add or remove the color setting of a single cell
 $('#pixel_canvas').on('mousedown','td', function(evt) {
 	if( evt.which === 1 ) {
