@@ -104,7 +104,7 @@ $('td').on('mouseover mouseleave', function() {
 $('td').off('mouseover mouseleave');
 });
 
-*/
+
 /////////////////////////////////WORKING END//////////////////
 
 
