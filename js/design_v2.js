@@ -6,15 +6,17 @@
 */
 
 // required for Safari thank you @Cedric_F
-/*
+
 const hexToRgb = hex => {
 	let r, g, b;
     r = parseInt(hex.substr(1,2),16);
     g = parseInt(hex.substr(3,2),16);
     b = parseInt(hex.substr(5,2),16);
-  //  return `rgb(${r}, ${g}, ${b})`; // template string in between back ticks
-	return  "rgb(r + g + b)";
+    return `rgb(${r}, ${g}, ${b})`; // template string in between back ticks
+
   }
+  
+/*
 function hexToRgb(hex) {
 	let r, g, b;
     r = parseInt(hex.substr(1,2),16);
@@ -25,7 +27,7 @@ function hexToRgb(hex) {
 */
 
 // add or remove the color setting of a single cell
-/*
+
 $('#pixel_canvas').on('mousedown','td', function(evt) {
 	if( evt.which === 1 ) {
  		const pickColor = document.getElementById('colorPicker').value;
@@ -54,11 +56,11 @@ $('td').on('mouseover mouseleave', function() {
 $('td').off('mouseover mouseleave');
 });
 
-*/
+
 
 //////////////////////////////////WORKING///////////////////
 
-
+/*
 
 // add or remove the color setting of a single cell
 $('#pixel_canvas').on('mousedown','td', function(evt) {
@@ -85,7 +87,7 @@ $('td').on('mouseover mouseleave', function() {
 $('td').off('mouseover mouseleave');
 });
 
-
+*/
 /////////////////////////////////WORKING END//////////////////
 
 
