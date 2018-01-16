@@ -46,7 +46,7 @@ h1 {
   color: #fff;
   background: rgba(37, 37, 37, 0.95);
   margin: 3px 3px 0 3px;
-  padding: 5px;
+  padding: 5px 10px;
   float: right;
   display: inline-block;
 
@@ -216,7 +216,6 @@ header {
 }
 
 .wrap {
-  background: rgba(37, 37, 37, 0.47);
   margin: 0 3px;
   padding: 15px;
 
