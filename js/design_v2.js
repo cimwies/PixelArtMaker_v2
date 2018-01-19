@@ -6,7 +6,7 @@
 */
 
 // required for Safari thank you @Cedric_F
-
+/*
 const hexToRgb = hex => {
 	let r, g, b;
     r = parseInt(hex.substr(1,2),16);
@@ -15,16 +15,17 @@ const hexToRgb = hex => {
     return `rgb(${r}, ${g}, ${b})`; // template string in between back ticks
 
   }
+  */
   
-/*
-function hexToRgb(hex) {
-	let r, g, b;
-    r = parseInt(hex.substr(1,2),16);
-    g = parseInt(hex.substr(3,2),16);
-    b = parseInt(hex.substr(5,2),16);
-    return `rgb(${r}, ${g}, ${b})`;
-}
-*/
+var hexToRgb = function hexToRgb(hex) {
+  var r = void 0,
+      g = void 0,
+      b = void 0;
+  r = parseInt(hex.substr(1, 2), 16);
+  g = parseInt(hex.substr(3, 2), 16);
+  b = parseInt(hex.substr(5, 2), 16);
+  return "rgb(" + r + ", " + g + ", " + b + ")";
+};
 
 // add or remove the color setting of a single cell
 
