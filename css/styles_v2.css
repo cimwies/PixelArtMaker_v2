@@ -25,7 +25,7 @@ body {
   font: 90%/1.75 'Lato', sans-serif;
   color: #999;
   text-shadow: 0 0 0.31em #000;
-  background: #332F2E;
+  background: #000; /*#332F2E;*/
   background-size: cover;
   padding: 9px;
 
@@ -34,48 +34,46 @@ body {
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 0.9em;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
 
 }
 
 h1 {
-  font-size: 1.8em;
-  letter-spacing: 3px;
-  background: rgba(37, 37, 37, 0.95);
-  margin: 3px 3px 0 3px;
-  padding: 5px 10px;
+  margin: 3px 3px 9px 3px;
+  padding: 10px 10px;
   float: right;
-  display: inline-block;
+
+  color: #000;
+  background: #fff;
+  text-shadow: none;
 
 }
 
 .red {
   text-transform: lowercase;
-  color: #EA3D2C;
+  color: #ea3d2c;
 
 }
 
-h2 {
-  font-size: 1.0em;
-
-}
-
-h3 {
-  font-size: 0.9em;
-}
 
 .howTo {
   font-weight: bold;
   text-transform: uppercase;
-  color: #EA3D2C;
+  color: #3cf;
   margin-right: 5px;
 
 }
 
 p { margin: 0;
+
+}
+
+footer p {
+  font-size: 0.9em;
 
 }
 
@@ -107,9 +105,19 @@ td:hover {
 
 }
 
+/* helper classes */
+
 .clear {
   clear: both;
 
+}
+
+.first {
+  margin: 0 4% 0 13%;
+}
+
+.second {
+  margin: 0 13% 0 4%;
 }
 
 /* Form and Input Elelemtns */
@@ -129,44 +137,61 @@ label {
 input[type=number],
 .input {
     text-transform: uppercase;
-    background-color: #e3e3e3;
-    border: 2px solid #e3e3e3;
+    background-color: #fff;
+    border: 2px solid #ccc;
     margin: 0 5px 5px 0;
     width: 45%;
     height: 30px;
 
 }
-
 .btn {
   text-transform: uppercase;
   color: #fff;
-  background: transparent;
   padding: 5px 10px;
-  border: 2px solid #e3e3e3; /* 1px solid  #448aff;*/
   border-radius: 100px;
   vertical-align: top;
-  width: 30%;
+  width: 32%;
   height: 30px;
   cursor: pointer;
 
 }
 
-.btn:hover {
+header .btn {
+  background: transparent;
+  border: 2px solid #d6d6d6;
+
+
+}
+
+header .btn:hover {
   color: #252525;
-  background-color: #e3e3e3;
-  border: 1px solid #e3e3e3;
+  background-color: #d6d6d6;
+  border: 2px solid #d6d6d6;
 
 }
 
-.first {
-  margin: 0 3% 0 12%;
+#container .btn {
+  background: #1473e6;
+  border: 2px solid #1473e6;
+
+
 }
 
-.second {
-  margin: 0 12% 0 3%;
+#container .btn:hover {
+  color: #fff;
+  background-color: #005abe;
+  border: 2px solid #005abe;
+
 }
 
 /* content elements */
+
+.wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+}
 
 header {
   min-width: 200px;
@@ -177,7 +202,7 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
+  overflow: auto;
 
 }
 
@@ -185,9 +210,15 @@ header {
   flex: 1;
   margin: 3px;
   padding: 15px;
-  background: rgba(37, 37, 37, 0.95); /* #252525;*/
+  min-width: 250px;
 
 }
+
+header.flexbox .col {
+  background: #252525;
+
+}
+
 .flexbox .col:nth-child(1) {
   -webkit-order: 0;
   -ms-flex-order: 0;
@@ -207,7 +238,7 @@ header {
 }
 
 #container {
-  clear: both;
+
   display: none;
   position: relative;
   width: 100%;
@@ -216,7 +247,7 @@ header {
 }
 
 .wrap {
-  margin: 0 3px;
+  margin: 0 auto;
   padding: 15px;
 
 }
@@ -228,9 +259,10 @@ header {
 }
 
 footer {
-  background: rgba(37, 37, 37, 0.95);
-  margin: 0 3px 0;
+  margin: 9px 3px 12px;
   padding: 15px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
 
 }
 
@@ -239,5 +271,4 @@ img {
   background-color: #fff;
   margin: 0 auto;
 
-  }
-
+}
