@@ -153,13 +153,12 @@ input[type=number],
   width: 32%;
   height: 30px;
   cursor: pointer;
-
+  outline: none;
 }
 
 header .btn {
   background: transparent;
   border: 2px solid #d6d6d6;
-
 
 }
 
@@ -238,7 +237,6 @@ header.flexbox .col {
 }
 
 #container {
-
   display: none;
   position: relative;
   width: 100%;
