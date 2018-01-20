@@ -14,10 +14,11 @@
     <script src="js/dom-to-image.js"></script>
 
 
-    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles_v2.css">
 </head>
 <body>
+<div class="wrapper">
 
 <h1>Pixel<span class="red">Art</span>Maker</h1>
 <div class="clear"></div>
@@ -42,7 +43,7 @@
         <div class="col">
             <h2>2. Pick Color</h2>
             <div id="colorDiv">
-              <input type="color" id="colorPicker" class="jscolor input second  {position:'down', hash:true}" value="#1473e6">
+              <input type="color" id="colorPicker" class="jscolor input second" value="#33ccff">
             </div>
        </div>
 
@@ -67,13 +68,16 @@
                 <input id="btn_save" type="button" class="btn second" value="save" />
             </div>
             <div class="col">
-                <p><span class="howTo">Save:</span> right click on the image and "save as".</p>
+                <p><span class="howTo">Save:</span> right click on the image created below and "save as".</p>
             </div>
          </div>
     </div>
   <footer>
-    <p>Works best on Firefox.<br>Known bugs Github: Safari picks wrong color; chrome has an CSS isssue saving the table; Safari and Edge can't save the table at all<br>Known bugs CodePen: due to xxx no save is possible at all</p>
+    <p>2018 Pixel Art Maker by cimwies</p>
+    <p>Works best on Firefox.<br>Known bugs Github: Safari picks wrong color; Chrome has an CSS isssue saving the table; Safari and Edge can't save the table at all<br>Known bugs CodePen: due to xxx no save is possible at all</p>
+
   </footer>
+</div>
   <script src="js/design_v2.js"></script>
 </body>
 </html>
