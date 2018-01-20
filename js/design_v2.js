@@ -5,7 +5,7 @@
 * @description To remove choosen background colors with right mouse button down
 */
 
-  
+
 var hexToRgb = function hexToRgb(hex) {
   var r = void 0,
       g = void 0,
@@ -59,7 +59,7 @@ function makeGrid() {
 
 // small screen size
 
-if ( $(window).width() > 414 && $(window).width() <= 1149) {
+if ( $(window).width() > 440 && $(window).width() <= 759) {
 	if ((width>30) || (height>30)) {
 		alert('MAX WIDTH AND HEIGHT IS LIMITED TO 30 TO FIT CANVAS ON SCREEN');
 		window.location.reload();
@@ -76,7 +76,7 @@ if ( $(window).width() > 414 && $(window).width() <= 1149) {
 
 // medium screen size
 
-} else if ( $(window).width() > 1150 && $(window).width() <= 1599){
+} else if ( $(window).width() > 760 && $(window).width() <= 1079){
 	if ((width>50) || (height>50)) {
 		alert('MAX WIDTH AND HEIGHT IS LIMITED TO 60 TO PREVENT BROWSER CRASH');
 		window.location.reload();
@@ -93,7 +93,7 @@ if ( $(window).width() > 414 && $(window).width() <= 1149) {
 
 // large screen size
 
-} else if ( $(window).width() > 1600 ){
+} else if ( $(window).width() > 1080 ){
 	if ((width>80) || (height>80)) {
 		alert('MAX WIDTH AND HEIGHT IS LIMITED TO 80 TO PREVENT BROWSER CRASH');
 		window.location.reload();
