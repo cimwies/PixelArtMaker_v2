@@ -5,17 +5,6 @@
 * @description To remove choosen background colors with right mouse button down
 */
 
-// required for Safari thank you @Cedric_F
-/*
-const hexToRgb = hex => {
-	let r, g, b;
-    r = parseInt(hex.substr(1,2),16);
-    g = parseInt(hex.substr(3,2),16);
-    b = parseInt(hex.substr(5,2),16);
-    return `rgb(${r}, ${g}, ${b})`; // template string in between back ticks
-
-  }
-  */
   
 var hexToRgb = function hexToRgb(hex) {
   var r = void 0,
@@ -56,41 +45,6 @@ $('td').on('mouseover mouseleave', function() {
 .on('mouseup', 'td', function() {
 $('td').off('mouseover mouseleave');
 });
-
-
-
-//////////////////////////////////WORKING///////////////////
-
-/*
-
-// add or remove the color setting of a single cell
-$('#pixel_canvas').on('mousedown','td', function(evt) {
-	if( evt.which === 1 ) {
- 		const pickColor = document.getElementById('colorPicker').value;
- 	 	$(this).css('background-color',pickColor);
-	} else if (evt.which === 3) {
- 	 	$(this).css('background-color','');
-	};
-
-// draw or continuously remove color fromseveral cells
-$('td').on('mouseover mouseleave', function() {
-	if( evt.which === 1 ) {
- 		const pickColor = document.getElementById('colorPicker').value;
- 	 	$(this).css('background-color',pickColor);
-	} else if (evt.which === 3) {
- 	 	$(this).css('background-color','');
-	};
-});
-})
-
-// stop mouse action on #pixel_canvas
-.on('mouseup', 'td', function() {
-$('td').off('mouseover mouseleave');
-});
-
-*/
-/////////////////////////////////WORKING END//////////////////
-
 
 /**
 *@description Create the grid by entereing the input values for width and height.
