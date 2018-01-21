@@ -68,7 +68,7 @@ if ( $(window).width() > 440 && $(window).width() <= 759) {
 			while (i <= height) {
 			table.append( '<tr></tr>' );
 				for (let j = 1; j <= width; j++) {
-			  	table.children().last().append('<td class="'+i+'-'+j+'"></td>');
+			  	table.children().last().append('<td></td>');
 			    };
 			i++;
 		};
@@ -85,7 +85,7 @@ if ( $(window).width() > 440 && $(window).width() <= 759) {
 			while (i <= height) {
 			table.append( '<tr></tr>' );
 				for (let j = 1; j <= width; j++) {
-			  	table.children().last().append('<td class="'+i+'-'+j+'"></td>');
+			  	table.children().last().append('<td></td>');
 			    };
 			i++;
 		};
@@ -102,7 +102,7 @@ if ( $(window).width() > 440 && $(window).width() <= 759) {
 			while (i <= height) {
 			table.append( '<tr></tr>' );
  				for (let j = 1; j <= width; j++) {
-					table.children().last().append('<td class="'+i+'-'+j+'"></td>');
+					table.children().last().append('<td></td>');
 					};
 				i++;
 		};
