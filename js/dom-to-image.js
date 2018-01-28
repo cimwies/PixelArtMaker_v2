@@ -105,7 +105,7 @@
      * @return {Promise} - A promise that is fulfilled with a PNG image data URL
      * */
     function toPng(node, options) {
-        return draw(node, options || {style:{margin:0;}})
+        return draw(node, options || {})
             .then(function (canvas) {
                 return canvas.toDataURL();
             });

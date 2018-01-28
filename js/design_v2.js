@@ -20,6 +20,7 @@ var hexToRgb = function hexToRgb(hex) {
 
 $('#pixel_canvas').on('mousedown','td', function(evt) {
 	if( evt.which === 1 ) {
+    evt.preventDefault();
  		const pickColor = document.getElementById('colorPicker').value;
 		new_color = hexToRgb(colorPicker.value);
 
@@ -31,7 +32,7 @@ $('#pixel_canvas').on('mousedown','td', function(evt) {
 // draw or continuously remove color fromseveral cells
 $('td').on('mouseover mouseleave', function() {
 	if( evt.which === 1 ) {
- 		const pickColor = document.getElementById('colorPicker').value;
+    const pickColor = document.getElementById('colorPicker').value;
 		new_color = hexToRgb(colorPicker.value);
 
  	 	$(this).css('background-color',new_color);
@@ -46,14 +47,15 @@ $('body').on('mouseup', function() {
 $('td').off('mouseover mouseleave');
 });
 
+
 /**
 *@description Create the grid by entereing the input values for width and height.
 *@description Limit grid size in dependance of 3 screen size ranges.
 */
 
 function makeGrid() {
-	const width = $('#input_width').val();
-	const height = $('#input_height').val();
+	const width = parseInt($('#input_width').val(), 10);
+	const height = parseInt($('#input_height').val(), 10);
 	const table = $('#pixel_canvas');
 	table.children().remove();
 
@@ -120,14 +122,9 @@ if ( $(window).width() > 440 && $(window).width() <= 759) {
 *@description Disable the context menu in order to make mouse button actions on only #pixel_canvas possible.
 */
 
-//function disableMenu() {
-//  $('#pixel_canvas').oncontextmenu = function(){
-//    e.preventDefault();
-//  };
-//};
 function disableMenu() {
-		document.getElementById('pixel_canvas').oncontextmenu = function() {
-		return false;
+  document.getElementById('pixel_canvas').oncontextmenu = function() {
+    return false;
 	}
 };
 
@@ -167,26 +164,26 @@ $('#btn_print').click(function() {
 *@description Required call back functions in order to proceed when the 'Submit' button is triggered.
 */
 
-
 document.getElementById('btn_submit').addEventListener('click',function(event) {
 	event.preventDefault();
 	makeGrid();
 	clear();
 	disableMenu();
-	$('#btn_submit').hide('slow');
+	//$('#btn_submit').hide('slow');
 	$('#container').show('fast');
 });
+
 
 /**
 * @description Snipped for file download
 * https://github.com/tsayen/dom-to-image#usage
 * Safari is not supported, as it uses a stricter security model on <foreignObject> tag.
 */
-
-$('#btn_save').click(function() {
-	var node = document.getElementById('pixel_canvas');
-	domtoimage.toPng(node)
+document.getElementById('btn_save').addEventListener('click', function() {
+  var node = document.getElementById('pixel_canvas');
+	domtoimage.toPng(node,{style: {margin: 0}})
     .then(function (dataUrl) {
+        console.log(dataUrl);
         var img = new Image();
         img.src = dataUrl;
         document.getElementById('container').appendChild(img);
