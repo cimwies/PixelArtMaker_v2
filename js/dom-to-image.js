@@ -105,7 +105,7 @@
      * @return {Promise} - A promise that is fulfilled with a PNG image data URL
      * */
     function toPng(node, options) {
-        return draw(node, options || {})
+        return draw(node, options || {style:{margin:0;}})
             .then(function (canvas) {
                 return canvas.toDataURL();
             });
@@ -674,7 +674,6 @@
                         return inliner.shouldProcess(rule.style.getPropertyValue('src'));
                     });
             }
-
             function getCssRules(styleSheets) {
                 var cssRules = [];
                 styleSheets.forEach(function (sheet) {
@@ -686,7 +685,6 @@
                 });
                 return cssRules;
             }
-
             function newWebFont(webFontRule) {
                 return {
                     resolve: function resolve() {
